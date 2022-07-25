@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="../../../../layout/custom_preview.xml" value="0.2776268115942029" />
+        <entry key="app/src/main/res/drawable/ic_done.xml" value="0.3065" />
+        <entry key="app/src/main/res/layout/activity_base.xml" value="0.15833333333333333" />
+        <entry key="app/src/main/res/layout/activity_completed.xml" value="0.32083333333333336" />
+        <entry key="app/src/main/res/layout/activity_get_started_screen.xml" value="0.32083333333333336" />
+        <entry key="app/src/main/res/layout/activity_home.xml" value="0.32083333333333336" />
+        <entry key="app/src/main/res/layout/activity_next_prev_details_workout.xml" value="0.32083333333333336" />
+        <entry key="app/src/main/res/layout/activity_purchase.xml" value="0.30520833333333336" />
+        <entry key="app/src/main/res/layout/activity_purchased_dialog.xml" value="0.30520833333333336" />
+        <entry key="app/src/main/res/layout/activity_splash.xml" value="0.30520833333333336" />
+        <entry key="app/src/main/res/layout/activity_workout.xml" value="0.30520833333333336" />
+        <entry key="app/src/main/res/layout/activity_workout_list.xml" value="0.15833333333333333" />
+        <entry key="app/src/main/res/layout/activity_workout_list_details.xml" value="0.30520833333333336" />
+        <entry key="app/src/main/res/layout/anim_ad_progress.xml" value="0.30520833333333336" />
+        <entry key="app/src/main/res/layout/cell_of_drawer_item.xml" value="0.30520833333333336" />
+        <entry key="app/src/main/res/layout/dl_exercise_exit.xml" value="0.30520833333333336" />
+        <entry key="app/src/main/res/layout/drawer_row.xml" value="0.30520833333333336" />
+        <entry key="app/src/main/res/layout/item_notification_coll.xml" value="0.30520833333333336" />
+        <entry key="app/src/main/res/layout/item_notification_expand.xml" value="0.30520833333333336" />
+        <entry key="app/src/main/res/layout/row_of_recycle_time.xml" value="0.30520833333333336" />
+        <entry key="app/src/main/res/layout/row_of_recycleview.xml" value="0.30520833333333336" />
+        <entry key="app/src/main/res/layout/start_workout_row.xml" value="0.30520833333333336" />
+        <entry key="app/src/main/res/layout/workout_details_row.xml" value="0.15833333333333333" />
+        <entry key="app/src/main/res/layout/workout_list_row.xml" value="0.30520833333333336" />
+        <entry key="app/src/main/res/layout/workout_row.xml" value="0.30520833333333336" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_1_8" default="true" project-jdk-name="1.8" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>

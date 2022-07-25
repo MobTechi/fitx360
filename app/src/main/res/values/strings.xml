@@ -1,0 +1,17 @@
+<resources>
+
+    <string name="app_name">Fitx360</string>
+    <string name="demo_text">Demo Text</string>
+    <string name="start_workout">Start Workout</string>
+    <string name="demo_time">00:00</string>
+    <string name="step_demo_text">1 / 11</string>
+
+    <string name="get_started">Get Started</string>
+    <string name="ready_to_take_on_the_challenge">Ready to take on the challenge?</string>
+
+    <string name="exit_confirmation">Are you sure want to exit?</string>
+    <string name="dl_exercise_quite_title">Don\'t quite! Feeling tired means it\'s working!</string>
+    <string name="btn_quit">Quit</string>
+    <string name="btn_continue">Continue</string>
+
+</resources>

@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "1076709080176",
+    "project_id": "fitx360-afa47",
+    "storage_bucket": "fitx360-afa47.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1076709080176:android:0275480ebb5421439848b5",
+        "android_client_info": {
+          "package_name": "com.mobtech.fitx360"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1076709080176-h1qtq2smgfd2n020d9e8ncf0b9gla5p7.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBuRU2z6wFR8-DsWYP8ekUZwavEc1-L4Ok"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1076709080176-h1qtq2smgfd2n020d9e8ncf0b9gla5p7.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

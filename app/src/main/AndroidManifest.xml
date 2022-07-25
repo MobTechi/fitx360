@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.mobtech.fitx360">
+
+    <application
+        android:allowBackup="false"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="false"
+        android:fullBackupOnly="false"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        tools:targetApi="s">
+
+        <activity
+            android:name="com.mobtech.fitx360.activity.GetStartedScreen" />
+
+        <activity
+            android:name="com.mobtech.fitx360.activity.SplashActivity"
+            android:exported="true"
+            android:theme="@style/AppTheme_Splash">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name="com.mobtech.fitx360.activity.HomeActivity"
+            android:theme="@style/AppTheme_Main" />
+        <activity
+            android:name="com.mobtech.fitx360.activity.WorkoutListActivity"
+            android:theme="@style/AppTheme_WorkoutList" />
+        <activity android:name="com.mobtech.fitx360.activity.WorkoutActivity" />
+        <activity android:name="com.mobtech.fitx360.activity.CompletedActivity" />
+        <activity android:name="com.mobtech.fitx360.activity.WorkoutListDetailsActivity" />
+        <activity android:name="com.mobtech.fitx360.activity.NextPrevDetailsWorkoutActivity" />
+    </application>
+
+</manifest>
