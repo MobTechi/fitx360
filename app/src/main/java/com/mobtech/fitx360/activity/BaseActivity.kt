@@ -1,7 +1,6 @@
 package com.mobtech.fitx360.activity
 
 import android.annotation.SuppressLint
-import android.content.ActivityNotFoundException
 import android.content.Context
 import android.content.Intent
 import android.content.res.Resources
@@ -33,7 +32,6 @@ open class BaseActivity : AppCompatActivity(), AdapterView.OnItemClickListener,
     private lateinit var context: Context
     private lateinit var listOfMenuItem: ListView
     private var arrWorkoutCategoryData: ArrayList<PWorkOutCategory> = ArrayList()
-    private val appPackageName = packageName
 
     @SuppressLint("InflateParams")
     override fun setContentView(layoutResID: Int) {
@@ -133,13 +131,8 @@ open class BaseActivity : AppCompatActivity(), AdapterView.OnItemClickListener,
     }
 
     private fun rateUs() {
-        try {
-            startActivity(Intent(Intent.ACTION_VIEW,
-                Uri.parse("https://play.google.com/store/apps/details?id=${appPackageName}")))
-        } catch (e: ActivityNotFoundException) {
-            startActivity(Intent(Intent.ACTION_VIEW,
-                Uri.parse("https://play.google.com/store/apps/details?id=${appPackageName}")))
-        }
+        startActivity(Intent(Intent.ACTION_VIEW,
+            Uri.parse("https://play.google.com/store/apps/details?id=com.mobtech.fitx360")))
     }
 
     private fun setListViewHeightBasedOnItems(listView: ListView): Boolean {
