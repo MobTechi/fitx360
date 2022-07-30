@@ -71,7 +71,7 @@ open class BaseActivity : AppCompatActivity(), AdapterView.OnItemClickListener,
         appVersionCode.text = UtilsKt.getVersionCodeName(this)
         val menuItems = UtilsKt.getMenuItems()
         arrWorkoutCategoryData =
-            menuItems.filter { item -> item.catDefficultyLevel != ConstantString.main } as ArrayList<PWorkOutCategory>
+            menuItems.filter { item -> item.catDifficultyLevel != ConstantString.main } as ArrayList<PWorkOutCategory>
         addExtraMenuItems()
         listOfMenuItem.onItemClickListener = this
         menuAdapter = MenuAdapter()
@@ -86,9 +86,15 @@ open class BaseActivity : AppCompatActivity(), AdapterView.OnItemClickListener,
             val menuView = LayoutInflater.from(context).inflate(R.layout.cell_of_drawer_item, null)
             val imgItem = menuView.findViewById(R.id.imgItem) as ImageView
             val txtItem = menuView.findViewById(R.id.txtItem) as TextView
+            val txtCount = menuView.findViewById(R.id.txtCount) as TextView
             Glide.with(this@BaseActivity).load(arrWorkoutCategoryData[p0].catImage).into(imgItem)
             txtItem.text =
                 "${arrWorkoutCategoryData[p0].catName} ${arrWorkoutCategoryData[p0].catSubCategory}"
+            if (p0 < 17) {
+                txtCount.text = arrWorkoutCategoryData[p0].exerciseCount
+            } else {
+                txtCount.visibility = View.GONE
+            }
             return menuView
         }
 
@@ -163,7 +169,7 @@ open class BaseActivity : AppCompatActivity(), AdapterView.OnItemClickListener,
         content: Context,
         confirmCallBack: ConfirmDialogCallBack,
         strTitle: String,
-        strMsg: String
+        strMsg: String,
     ): Boolean {
         drawerLayout.closeDrawer(GravityCompat.START)
         val builder1 = AlertDialog.Builder(content)

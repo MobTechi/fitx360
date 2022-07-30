@@ -156,7 +156,7 @@ class WorkoutActivity : BaseActivity() {
     private var running = false
     private var currentTime: Long = 0
 
-    fun start() {
+    private fun start() {
         val handler = Handler()
         handler.postDelayed(object : Runnable {
             override fun run() {
@@ -297,15 +297,15 @@ class WorkoutActivity : BaseActivity() {
     /* Todo set current workout setup */
     @SuppressLint("NotifyDataSetChanged")
     private fun workoutSetup(pos: Int) {
-        val pworkDetails: PWorkOutDetails = pWorkoutList[pos]
+        val workDetails: PWorkOutDetails = pWorkoutList[pos]
         if (timer != null) {
             timer?.cancel()
         }
 
-        if (pworkDetails.time_type == ConstantString.workout_type_time) {
+        if (workDetails.time_type == ConstantString.workout_type_time) {
             rltStepTypeWorkOut.visibility = View.GONE
             rltTimeTypeWorkOut.visibility = View.VISIBLE
-            startWorkoutTimer(pworkDetails.time.substring(pworkDetails.time.indexOf(":") + 1)
+            startWorkoutTimer(workDetails.time.substring(workDetails.time.indexOf(":") + 1)
                 .toInt())
         } else {
             rltStepTypeWorkOut.visibility = View.VISIBLE

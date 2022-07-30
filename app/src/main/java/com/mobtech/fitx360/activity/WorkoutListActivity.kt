@@ -1,13 +1,10 @@
 package com.mobtech.fitx360.activity
 
+import android.annotation.SuppressLint
 import android.content.Context
 import android.content.Intent
-import android.os.Build
 import android.os.Bundle
-import android.util.Log
 import android.view.View
-import android.view.Window
-import android.view.WindowManager
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.mobtech.fitx360.R
 import com.mobtech.fitx360.adapter.WorkoutListAdapter
@@ -38,12 +35,13 @@ class WorkoutListActivity : BaseActivity() {
 
 
     /* Todo common methods */
+    @SuppressLint("SetTextI18n")
     private fun defaultSetup() {
         txtWorkoutListCategoryName.text = pWorkOutCategory.catName
         txtWorkoutListCategoryDetails.text = pWorkOutCategory.catSubCategory
         imgToolbarBack.setImageResource(pWorkOutCategory.catImage)
 
-        when (pWorkOutCategory.catDefficultyLevel) {
+        when (pWorkOutCategory.catDifficultyLevel) {
             ConstantString.biginner -> imgWorkoutDificultyImage.setImageResource(
                 R.drawable.ic_beginner_level)
             ConstantString.intermediate -> imgWorkoutDificultyImage.setImageResource(
@@ -55,6 +53,7 @@ class WorkoutListActivity : BaseActivity() {
 
         val data = DataHelper(mContext)
         workOutDetailData = data.getWorkOutDetails(pWorkOutCategory.catTableName)
+        txtWorkoutCount.text = pWorkOutCategory.exerciseCount
 
         rcyWorkoutList.layoutManager =
             LinearLayoutManager(mContext, LinearLayoutManager.VERTICAL, false)
@@ -67,8 +66,6 @@ class WorkoutListActivity : BaseActivity() {
 
     private fun initAction() {
         imgWorkOutListBack.setOnClickListener {
-
-
             finish()
         }
         btnStartWorkout.setOnClickListener {

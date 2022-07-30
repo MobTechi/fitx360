@@ -48,7 +48,7 @@
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
-        <item name="android:statusBarColor">@color/white</item>
+        <item name="android:statusBarColor">@color/color_black</item>
         <item name="android:windowLightStatusBar" tools:targetApi="m">false</item>
         <item name="android:windowFullscreen">false</item>
         <item name="android:textColor">@color/color_black</item>
