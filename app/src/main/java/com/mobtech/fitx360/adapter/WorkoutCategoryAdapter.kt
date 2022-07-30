@@ -1,8 +1,8 @@
 package com.mobtech.fitx360.adapter
 
+import android.annotation.SuppressLint
 import android.content.Context
 import android.content.Intent
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -19,7 +19,7 @@ import java.io.Serializable
 
 class WorkoutCategoryAdapter(
     internal val mContext: Context,
-    private val arrWorkoutCategoryData: ArrayList<PWorkOutCategory>
+    private val arrWorkoutCategoryData: ArrayList<PWorkOutCategory>,
 ) : RecyclerView.Adapter<WorkoutCategoryAdapter.ViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, i: Int): ViewHolder {
@@ -27,12 +27,14 @@ class WorkoutCategoryAdapter(
         return ViewHolder(convertView)
     }
 
+    @SuppressLint("SetTextI18n")
     override fun onBindViewHolder(holder: ViewHolder, pos: Int) {
         val item = getItem(pos)
 
         holder.imgWorkoutDifficultly.visibility = View.VISIBLE
+        holder.txtWorkoutCount.text = item.exerciseCount
 
-        when (item.catDefficultyLevel) {
+        when (item.catDifficultyLevel) {
             ConstantString.biginner -> {
                 holder.imgWorkoutDifficultly.setImageResource(R.drawable.ic_beginner_level)
             }
@@ -47,7 +49,7 @@ class WorkoutCategoryAdapter(
             }
         }
 
-        if (item.catDefficultyLevel == ConstantString.main) {
+        if (item.catDifficultyLevel == ConstantString.main) {
             holder.rltWorkOutTitle.visibility = View.VISIBLE
             holder.RltWorkOutDetails.visibility = View.GONE
             holder.txtWorkoutTitle.text = item.catName
@@ -57,8 +59,7 @@ class WorkoutCategoryAdapter(
             holder.RltWorkOutDetails.visibility = View.VISIBLE
             holder.txtWorkoutCategoryTitle.text = item.catName
             holder.txtWorkoutDetails.text = item.catSubCategory
-            Log.e("TAG",
-                "onBindViewHolder:::item:::  " + item.catName + "  " + item.catSubCategory + "  " + item.catDetailsBg)
+
             if (item.catDetailsBg == 0) {
                 holder.txtWorkoutDetails.background = null
             } else {
@@ -98,6 +99,7 @@ class WorkoutCategoryAdapter(
         val txtWorkoutTitle: TextView = itemView.findViewById(R.id.txtWorkoutTitle)
         val txtWorkoutDetails: TextView = itemView.findViewById(R.id.txtWorkoutDetails)
         val txtWorkoutCategoryTitle: TextView = itemView.findViewById(R.id.txtWorkoutCategoryTitle)
+        val txtWorkoutCount: TextView = itemView.findViewById(R.id.txtWorkoutCount)
 
         val imgWorkoutRow: ImageView = itemView.findViewById(R.id.imgWorkoutRow)
         val imgWorkoutDifficultly: ImageView = itemView.findViewById(R.id.imgWorkoutDeificulty)
@@ -108,7 +110,7 @@ class WorkoutCategoryAdapter(
 
         override fun onClick(v: View?) {
             val item = getItem(position)
-            if (item.catDefficultyLevel != ConstantString.main) {
+            if (item.catDifficultyLevel != ConstantString.main) {
                 val intent = Intent(mContext, WorkoutListActivity::class.java)
                 intent.putExtra(ConstantString.key_workout_category_item, item as Serializable)
                 mContext.startActivity(intent)

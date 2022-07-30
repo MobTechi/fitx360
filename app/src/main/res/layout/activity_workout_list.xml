@@ -18,13 +18,14 @@
             android:layout_width="match_parent"
             android:layout_height="@dimen/workout_list_title_height"
             android:background="@android:color/transparent"
-            android:scaleType="centerCrop" />
+            android:scaleType="centerCrop"
+            tools:ignore="ContentDescription" />
 
         <ImageView
             android:id="@+id/imgWorkOutListBack"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="8dp"
+            android:layout_marginStart="8dp"
             android:layout_marginTop="32dp"
             android:background="@android:color/transparent"
             android:padding="@dimen/toolbar_img_padding"
@@ -34,24 +35,37 @@
             android:id="@+id/txtWorkoutListCategoryName"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="8dp"
+            android:layout_marginStart="8dp"
             android:layout_marginTop="34dp"
             android:layout_toEndOf="@+id/imgWorkOutListBack"
             android:text="@string/demo_text"
             android:textAllCaps="true"
             android:textColor="@color/color_toolbar_text"
             android:textSize="@dimen/toolbar_title_text"
-            android:textStyle="bold" />
+            android:textStyle="bold"
+            tools:ignore="SpUsage" />
 
         <TextView
             android:id="@+id/txtWorkoutListCategoryDetails"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@+id/txtWorkoutListCategoryName"
-            android:layout_marginLeft="8dp"
+            android:layout_marginStart="8dp"
             android:layout_marginTop="8dp"
             android:layout_toEndOf="@+id/imgWorkOutListBack"
             android:text="@string/demo_text"
+            android:textColor="@color/color_toolbar_text"
+            android:textSize="@dimen/workout_list_details_txt"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/txtWorkoutCount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/txtWorkoutListCategoryDetails"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_toEndOf="@+id/imgWorkOutListBack"
             android:textColor="@color/color_toolbar_text"
             android:textSize="@dimen/workout_list_details_txt"
             android:textStyle="bold" />
@@ -60,12 +74,13 @@
             android:id="@+id/imgWorkoutDificultyImage"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/txtWorkoutListCategoryDetails"
-            android:layout_marginLeft="8dp"
+            android:layout_below="@+id/txtWorkoutCount"
+            android:layout_marginStart="8dp"
             android:layout_marginTop="8dp"
             android:layout_toEndOf="@+id/imgWorkOutListBack"
             android:background="@android:color/transparent"
-            android:src="@drawable/ic_beginner_level" />
+            android:src="@drawable/ic_beginner_level"
+            tools:ignore="ContentDescription" />
 
     </RelativeLayout>
 

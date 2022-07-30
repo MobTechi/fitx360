@@ -14,10 +14,10 @@
         <entry key="app/src/main/res/layout/activity_purchased_dialog.xml" value="0.30520833333333336" />
         <entry key="app/src/main/res/layout/activity_splash.xml" value="0.30520833333333336" />
         <entry key="app/src/main/res/layout/activity_workout.xml" value="0.30520833333333336" />
-        <entry key="app/src/main/res/layout/activity_workout_list.xml" value="0.15833333333333333" />
+        <entry key="app/src/main/res/layout/activity_workout_list.xml" value="0.33" />
         <entry key="app/src/main/res/layout/activity_workout_list_details.xml" value="0.30520833333333336" />
         <entry key="app/src/main/res/layout/anim_ad_progress.xml" value="0.30520833333333336" />
-        <entry key="app/src/main/res/layout/cell_of_drawer_item.xml" value="0.30520833333333336" />
+        <entry key="app/src/main/res/layout/cell_of_drawer_item.xml" value="0.5" />
         <entry key="app/src/main/res/layout/dl_exercise_exit.xml" value="0.30520833333333336" />
         <entry key="app/src/main/res/layout/drawer_row.xml" value="0.30520833333333336" />
         <entry key="app/src/main/res/layout/item_notification_coll.xml" value="0.30520833333333336" />
