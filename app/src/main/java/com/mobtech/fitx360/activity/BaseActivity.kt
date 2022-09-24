@@ -16,6 +16,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.GravityCompat
 import androidx.drawerlayout.widget.DrawerLayout
 import com.bumptech.glide.Glide
+import com.google.android.play.core.review.ReviewManagerFactory
 import com.mobtech.fitx360.R
 import com.mobtech.fitx360.interfaces.ConfirmDialogCallBack
 import com.mobtech.fitx360.utils.ConstantString
@@ -137,8 +138,18 @@ open class BaseActivity : AppCompatActivity(), AdapterView.OnItemClickListener,
     }
 
     private fun rateUs() {
-        startActivity(Intent(Intent.ACTION_VIEW,
-            Uri.parse("https://play.google.com/store/apps/details?id=com.mobtech.fitx360")))
+        val reviewManager = ReviewManagerFactory.create(this)
+        val request = reviewManager.requestReviewFlow()
+        request.addOnCompleteListener { task ->
+            if (task.isSuccessful) {
+                // We got the ReviewInfo object
+                val reviewInfo = task.result
+                reviewManager.launchReviewFlow(this, reviewInfo)
+            }
+        }
+        request.addOnFailureListener {
+            Toast.makeText(this, "Something wrong. Please Try Again!", Toast.LENGTH_SHORT).show()
+        }
     }
 
     private fun setListViewHeightBasedOnItems(listView: ListView): Boolean {
